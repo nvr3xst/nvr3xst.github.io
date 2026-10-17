@@ -1,0 +1,25 @@
+baseURL = "https://nvr3xst.github.io/"
+languageCode = "vi-VN"
+title = "Nvr3xst's Journal"
+theme = "reimu"
+
+paginate = 10
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    guessSyntax = true
+    noClasses = false
+    lineNos = true
+    lineNoStart = 1
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]

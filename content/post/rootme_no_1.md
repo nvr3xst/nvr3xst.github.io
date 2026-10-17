@@ -1,6 +1,6 @@
 ---
 title: "Root Me - Writeup | No. 01"
-date: 2026-10-16T20:00:00+07:00
+date: 2026-10-17T20:00:00+07:00
 draft: false
 description: "Writeup for challenge ELF x86 - Stack buffer overflow basic 1"
 categories:

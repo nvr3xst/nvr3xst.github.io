@@ -652,9 +652,22 @@ home_categories:
 # Inject code snippet
 # Make sure your code snippet is safeHTML
 injector:
-  head_begin: # Inject code snippet right after <head>
+  head_begin: |-
+    <script>
+      /* Chạy ngay lập tức trước khi trình duyệt vẽ giao diện */
+      document.documentElement.setAttribute('data-theme', 'dark');
+    </script>
+  # Inject code snippet right after <head>
   head_end: |-
     <style>
+      /* Ép màu nền của Preloader và body thành màu tối ngay từ đầu */
+      html, body, #loader-wrapper, #loader-wrapper .loader-section {
+        background-color: #1e2027 !important;
+      }
+      #loader-wrapper #loader-text {
+        color: #e0e0e0 !important;
+      }
+      
       /* Chỉ tắt hiệu ứng làm tối cho Avatar trong Dark Mode */
       html[data-theme='dark'] img[src*="avatar"],
       html[data-theme='dark'] .sidebar-author-img img,
